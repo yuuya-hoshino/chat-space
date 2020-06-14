@@ -39,27 +39,17 @@ Things you may want to cover:
 |------|----|-------|
 |name|string|null: false|
 ### Association
-- has_many : users
+- has_many : users , through: :groups_tags
 - has_many : chats
-- has_many : groups_tags
-- has_many  :tags, through: :groups_tags
-
-## tagsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|text|text|null: false|
-### Association
-- has_many : groups_tags
-- has_many : groups, through: :groups_tags
 
 ## groups_tagsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |group_id|integer|null: false, foreign_key: true|
-|tag_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :group
-- belongs_to :tag
+|user_id||integer|null: false, foreign_key: true|
+- belongs_to :groups
+- belongs_to :users
+
 
 ## chatsテーブル
 |Column|Type|Options|
