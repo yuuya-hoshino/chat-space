@@ -1,0 +1,42 @@
+.chat-main
+  .group-header
+    .group-info
+      .group-chatname
+        test
+      .user-member
+        Member:masa
+    .group-edit
+      ._group-edit
+        =link_to "#" do
+          Edit
+  .message-list
+    .message
+      .info 
+        .member
+          masa
+        .date
+          2019/11/20(Wed) 17:43:01
+      .text 
+        .content
+          ohayou
+      .info 
+        .member
+          masa
+        .date
+          2019/11/20(Wed) 17:43:01
+      .text 
+        .content
+          ohayou
+  .message-form
+    .new-message
+      .input-box
+        ._text
+          type a message
+        ._image
+          ._icon
+            =icon('fas', 'image')
+          ._file
+            ファイルを選択
+      ._send-btn
+        ._btn
+          Send
