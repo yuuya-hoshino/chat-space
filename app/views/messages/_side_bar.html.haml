@@ -1,0 +1,18 @@
+.side-bar
+  .group-list
+    .user-name
+      .user-names
+        = current_user.name
+      .icon
+        =link_to new_group_path do
+          =icon('far','edit', class: 'icon')
+        =link_to edit_user_path(current_user) do
+          =icon('fas', 'cog', class: 'icon')
+  .group-chat
+    - current_user.groups.each do |group|
+      .group-name
+        = link_to group_messages_path(group) do
+          .group-chatname
+            = group.name
+          .talk-list
+            = group.show_last_message
