@@ -198,12 +198,11 @@ DEPENDENCIES
   byebug
   carrierwave
   coffee-rails (~> 4.2)
-<<<<<<< Updated upstream
-=======
+
   devise
   font-awesome-sass
   haml-rails
->>>>>>> Stashed changes
+
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
