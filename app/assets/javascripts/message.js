@@ -62,6 +62,7 @@ $(function(){
       var html = buildHTML(data);
       $('.messages').append(html);
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight });
+      $('._btn').prop('disabled', false);
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
@@ -87,6 +88,7 @@ $(function(){
         });
         $('.messages').append(insertHTML);
         $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight });
+        
       }
     })
     .fail(function() {
