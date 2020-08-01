@@ -2,41 +2,29 @@
   .group-header
     .group-info
       .group-chatname
-        test
+        = @group.name
       .user-member
-        Member:masa
+        Member:
+        - @group.users.each do |user|
+          = user.name
     .group-edit
       ._group-edit
-        =link_to "#" do
+        =link_to edit_group_path(@group) do
           Edit
-  .message-list
-    .message
-      .info 
-        .member
-          masa
-        .date
-          2019/11/20(Wed) 17:43:01
-      .text 
-        .content
-          ohayou
-      .info 
-        .member
-          masa
-        .date
-          2019/11/20(Wed) 17:43:01
-      .text 
-        .content
-          ohayou
+
+  .messages
+    = render @messages
+    
   .message-form
     .new-message
-      .input-box
-        ._text
-          type a message
-        ._image
-          ._icon
-            =icon('fas', 'image')
-          ._file
-            ファイルを選択
-      ._send-btn
-        ._btn
-          Send
+      = form_for [@group, @message], html:{class: "new-message"} do |f|
+        .input-box
+          = f.text_field :content, class: '_text', placeholder: 'type a message'
+          ._image
+            = f.label :image, class: 'form__mask__image' do
+              ._icon
+                = icon('fas', 'image', class: 'icon')
+              ._file
+                = f.file_field :image, class: 'hidden'
+        ._send-btn
+          = f.submit 'Send', class: '_btn'
