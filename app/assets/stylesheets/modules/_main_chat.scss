@@ -35,6 +35,7 @@
       }
     }
   }
+
   .messages{
     background-color: #fafafa;
     height:calc(100vh - 190px);
@@ -42,6 +43,7 @@
     overflow: scroll;
     .message {
       padding-bottom: 40px;
+
       .upper-message {
         display: flex;
         margin-bottom: 10px;
@@ -50,6 +52,7 @@
           color: #333333
           font-weight bold;
         }
+
         .upper-message__date {
           margin-left: 10px;
           font-size: 12px;

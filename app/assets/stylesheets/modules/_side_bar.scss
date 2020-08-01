@@ -1,0 +1,51 @@
+.side-bar{
+  background-color: #2f3e51;
+  width: 300px;
+  height:100vh;
+
+  .group-list{
+    background-color: #253141;
+    height:100px;
+    display: flex;
+    align-items: center;
+    .user-name{
+      color: #ffffff;
+      width: 260px;
+      height: 20px;
+      margin-left: 20px;
+      display: flex;
+      justify-content: space-between;
+        .user-names{
+          line-height: 0 auto;
+        }
+        .icon{
+          width: 60px;
+          display: flex;
+          justify-content:flex-end;
+            a{
+              color: #ffffff;
+              margin-left: 5px;
+            }
+        }
+    }
+  }
+  .group-chat{
+    width: 300px;
+    height: calc(100vh - 100px);
+      .group-name{
+        padding-right: 20px;
+        padding-left: 20px;
+        .group-chatname{
+          color: #ffffff;
+          padding-top: 20px;
+          padding-bottom: 5px;
+          font-size: 15px;
+        }
+        .talk-list{
+          color: #ffffff;
+          padding-bottom: 40px;
+          font-size: 11px;
+        }
+      }
+  }
+}
