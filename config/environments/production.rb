@@ -1,4 +1,4 @@
-server '52.196.113.88', user: 'ec2-user', roles: %w{app db web}
+
 
 
 Rails.application.configure do
